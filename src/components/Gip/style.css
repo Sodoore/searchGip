@@ -1,0 +1,9 @@
+.gip{
+   display: grid;
+   grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+}
+.sodGip{
+    margin: 0;
+    width: 400px;
+    height: 400px;
+}
