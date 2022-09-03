@@ -1,12 +1,10 @@
 import "./style.css";
-import axios from "axios";
-import {GetGip} from "../Gip"
-
+import {Search} from "../Seach"
 function App() {
   return (
   <div>
     <h1>COOL GIPS</h1> 
-    <GetGip/>
+    <Search/>
   </div>
   
   );

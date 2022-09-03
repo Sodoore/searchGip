@@ -1,20 +1,25 @@
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
 import "./style.css"
+import {GetGip} from "../Gip"
 
 
 export const Search = () => {
-    const [state, setState] = useState(0)
-
-    const set = (e) =>{
-        setState(e.target.value)
-        console.log(state)
+const inputElement = useRef();
+    const searching = (e) =>{
+        inputElement.current.focus();
+        console.log(e.target.value)
     }
+    // const find = () => state
 
     return (
         
-        <div className="searchCont">
-            <input className="SearchIn" type="search" onChange={set}/>
-             <button className="SearchBtn">SEARCH</button>
+        <div>
+
+            <div className="searchCont">
+                <input className="SearchIn" type="search" placeholder="Please search GIP" ref={inputElement}/>
+                <button className="SearchBtn" searching={searching}>SEARCH</button>
+             </div>
+             <GetGip/>
         </div>
        
         
